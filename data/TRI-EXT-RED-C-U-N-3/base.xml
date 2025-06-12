@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="AppartmentPlan">
+        <Node name="Appartment"/>
+        <Node name="LivingRoom"/>
+        <Node name="Bedroom"/>
+        <Node name="Bathroom"/>
+        <Node name="Kitchen"/>
+        <Node name="Bed">
+            <Property name="size" />
+        </Node>
+        <Node name="Wardrobe">
+            <Property name="width" />
+            <Property name="height" />
+        </Node>
+        <Node name="Shower"/>
+        <Node name="Toilet"/>
+    </Group>
+
+    <DirectedEdge start="Appartment" end="LivingRoom" semantics="contains"/>
+    <DirectedEdge start="Appartment" end="Bedroom" semantics="contains"/>
+    <DirectedEdge start="Appartment" end="Bathroom" semantics="contains"/>
+    <DirectedEdge start="Appartment" end="Kitchen" semantics="contains"/>
+    <DirectedEdge start="Bedroom" end="Bed" semantics="contains"/>
+    <DirectedEdge start="Bedroom" end="Wardrobe" semantics="contains"/>
+    <DirectedEdge start="Bathroom" end="Toilet" semantics="contains"/>
+    <DirectedEdge start="Bathroom" end="Shower" semantics="contains"/>
+</Graph>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Add furniture and devices to the kitchen.
+                THis includes a microwave, an oven, a refrigerator, and a sink.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="Microwave" groupName="AppartmentPlan" />
+        </Operation>
+        <Operation index="1">
+            <AddProperty nodeName="Microwave" propertyName="Power" />
+        </Operation>
+        <Operation index="2">
+            <AddNode nodeName="Oven" groupName="AppartmentPlan"/>
+        </Operation>
+        <Operation index="3">
+            <AddProperty nodeName="Oven" propertyName="maxTemperature" />
+        </Operation>
+        <Operation index="4">
+            <AddProperty nodeName="Oven" propertyName="hasAirCirculation" />
+        </Operation>
+        <Operation index="5">
+            <AddNode nodeName="Refrigerator" groupName="AppartmentPlan"/>
+        </Operation>
+        <Operation index="6">
+            <AddProperty nodeName="Refrigerator" propertyName="Volume" />
+        </Operation>
+        <Operation index="7">
+            <AddNode nodeName="Sink" groupName="AppartmentPlan"/>
+        </Operation>
+        <Operation index="8">
+            <AddDirectedEdge start="Kitchen" end="Oven" semantics="contains" />
+        </Operation>
+        <Operation index="9">
+            <AddDirectedEdge start="Kitchen" end="Refrigerator" semantics="contains" />
+        </Operation>
+        <Operation index="10">
+            <AddDirectedEdge start="Kitchen" end="Sink" semantics="contains" />
+        </Operation>
+        <Operation index="11">
+            <AddDirectedEdge start="Kitchen" end="Microwave" semantics="contains" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>
