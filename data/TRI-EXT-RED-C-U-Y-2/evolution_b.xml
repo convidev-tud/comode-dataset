@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Add more furniture to the childs bedroom.
+                This inlcudes the addition of a carpet and a wardrobe.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="Carpet" groupName="AppartmentPlan" />
+        </Operation>
+        <Operation index="1">
+            <AddNode nodeName="ChildsWardrobe" groupName="AppartmentPlan" />
+        </Operation>
+        <Operation index="2">
+           <AddDirectedEdge start="Bedroom2" end="Carpet" semantics="contains" />
+        </Operation>
+        <Operation index="3">
+           <AddDirectedEdge start="Bedroom2" end="ChildsWardrobe" semantics="contains" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

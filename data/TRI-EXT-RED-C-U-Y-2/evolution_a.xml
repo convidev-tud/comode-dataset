@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REDUCE</Category>
+            <Description>
+                Remove Bedroom 2.
+                This includes the removel of the childs bed and the desk.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <DeleteNode nodeName="ChildsBed" groupName="AppartmentPlan"/>
+        </Operation>
+        <Operation index="1">
+            <DeleteNode nodeName="Desk" groupName="AppartmentPlan"/>
+        </Operation>
+        <Operation index="2">
+            <DeleteNode nodeName="Bedroom2" groupName="AppartmentPlan"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

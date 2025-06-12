@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="AppartmentPlan">
+        <Node name="Appartment"/>
+        <Node name="Bedroom1"/>
+        <Node name="Bedroom2"/>
+        <Node name="Kitchen"/>
+        <Node name="DoubleBed"/>
+        <Node name="Wardrobe"/>
+        <Node name="ChildsBed"/>
+        <Node name="Desk"/>
+        <Node name="Oven"/>
+        <Node name="Sink"/>
+        <Node name="Refridgerator"/>
+        <Node name="Microwave"/>
+    </Group>
+
+    <DirectedEdge start="Appartment" end="Bedroom1" semantics="contains"/>
+    <DirectedEdge start="Appartment" end="Bedroom2" semantics="contains"/>
+    <DirectedEdge start="Appartment" end="Kitchen" semantics="contains"/>
+    <DirectedEdge start="Bedroom1" end="DoubleBed" semantics="contains"/>
+    <DirectedEdge start="Bedroom1" end="Wardrobe" semantics="contains"/>
+    <DirectedEdge start="Bedroom2" end="ChildsBed" semantics="contains"/>
+    <DirectedEdge start="Bedroom2" end="Desk" semantics="contains"/>
+    <DirectedEdge start="Kitchen" end="Oven" semantics="contains"/>
+    <DirectedEdge start="Kitchen" end="Sink" semantics="contains"/>
+    <DirectedEdge start="Kitchen" end="Refridgerator" semantics="contains"/>
+    <DirectedEdge start="Kitchen" end="Microwave" semantics="contains"/>
+</Graph>

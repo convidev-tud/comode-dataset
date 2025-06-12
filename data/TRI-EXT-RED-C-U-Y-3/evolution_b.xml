@@ -17,10 +17,10 @@
             <AddNode nodeName="StatementCoverageReport" groupName="CodeEditorFeatures" />
         </Operation>
         <Operation index="2">
-           <AddDirectedEdge start="CodeAnalysis" end="LineCoverageReport" semantics="sub-feature" />
+           <AddDirectedEdge start="TestCoverage" end="LineCoverageReport" semantics="sub-feature" />
         </Operation>
         <Operation index="3">
-           <AddDirectedEdge start="CodeAnalysis" end="StatementCoverageReport" semantics="sub-feature" />
+           <AddDirectedEdge start="TestCoverage" end="StatementCoverageReport" semantics="sub-feature" />
         </Operation>
     </SemanticEdit>
 
