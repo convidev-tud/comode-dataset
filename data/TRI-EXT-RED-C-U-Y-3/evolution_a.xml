@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REDUCE</Category>
+            <Description>
+                Remove the CodeAnalysis feature and its sub-features.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <DeleteNode nodeName="TestCoverage" groupName="CodeEditorFeatures"/>
+        </Operation>
+        <Operation index="1">
+            <DeleteNode nodeName="CodeMetrics" groupName="CodeEditorFeatures"/>
+        </Operation>
+        <Operation index="2">
+            <DeleteNode nodeName="FileMetrics" groupName="CodeEditorFeatures"/>
+        </Operation>
+        <Operation index="3">
+            <DeleteNode nodeName="CodeAnalysis" groupName="CodeEditorFeatures"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

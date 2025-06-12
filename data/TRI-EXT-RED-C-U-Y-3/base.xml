@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="CodeEditorFeatures">
+        <Node name="CodeEditor"/>
+        <Node name="RuntimeEnvironment"/>
+        <Node name="FileExplorer"/>
+        <Node name="EditWindow"/>
+        <Node name="CodeView"/>
+        <Node name="ModelView"/>
+        <Node name="CodeAnalysis"/>
+        <Node name="TestCoverage"/>
+        <Node name="CodeMetrics"/>
+        <Node name="FileMetrics"/>
+    </Group>
+
+    <DirectedEdge start="CodeEditor" end="RuntimeEnvironment" semantics="sub-feature"/>
+    <DirectedEdge start="CodeEditor" end="FileExplorer" semantics="sub-feature"/>
+    <DirectedEdge start="CodeEditor" end="EditWindow" semantics="sub-feature"/>
+    <DirectedEdge start="CodeEditor" end="CodeAnalysis" semantics="sub-feature"/>
+    <DirectedEdge start="EditWindow" end="CodeView" semantics="sub-feature"/>
+    <DirectedEdge start="EditWindow" end="ModelView" semantics="sub-feature"/>
+    <DirectedEdge start="CodeAnalysis" end="TestCoverage" semantics="sub-feature"/>
+    <DirectedEdge start="CodeAnalysis" end="CodeMetrics" semantics="sub-feature"/>
+    <DirectedEdge start="CodeAnalysis" end="FileMetrics" semantics="sub-feature"/>
+</Graph>

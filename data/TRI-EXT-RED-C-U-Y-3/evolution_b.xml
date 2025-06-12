@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Add specific TestCoverage features.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="LineCoverageReport" groupName="CodeEditorFeatures" />
+        </Operation>
+        <Operation index="1">
+            <AddNode nodeName="StatementCoverageReport" groupName="CodeEditorFeatures" />
+        </Operation>
+        <Operation index="2">
+           <AddDirectedEdge start="CodeAnalysis" end="LineCoverageReport" semantics="sub-feature" />
+        </Operation>
+        <Operation index="3">
+           <AddDirectedEdge start="CodeAnalysis" end="StatementCoverageReport" semantics="sub-feature" />
+        </Operation>
+    </SemanticEdit>
+
+    <SemanticEdit index="1">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Add sub-features for CodeMetrics.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="OOPMetrics" groupName="CodeEditorFeatures" />
+        </Operation>
+        <Operation index="1">
+            <AddNode nodeName="StyleMetrics" groupName="CodeEditorFeatures" />
+        </Operation>
+        <Operation index="2">
+           <AddDirectedEdge start="CodeMetrics" end="OOPMetrics" semantics="sub-feature" />
+        </Operation>
+        <Operation index="3">
+           <AddDirectedEdge start="CodeMetrics" end="StyleMetrics" semantics="sub-feature" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>
