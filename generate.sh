@@ -67,8 +67,15 @@ for dir in ../../data/*/; do
     echo "Processing data directory: $realdir"
     echo "base model: $realdir/base.xml"
     echo "evolution a: $realdir/evolution_a.xml"
-    echo "evolution b: $realdir/evolution_b.xml"
-    echo move base.xml evolution_a.xml evolution_b.xml to gen/
+    
+    if [ ! -f "$realdir/evolution_b.xml" ]; then
+      echo "evolution_b.xml not found, skipping..."
+      continue
+    else
+      echo "evolution b: $realdir/evolution_b.xml"
+    fi
+    
+    echo "move base.xml evolution_a.xml (evolution_b.xml) to gen/"
 
     echo "Creating gen/${folder_name}..."
     mkdir -p ../../gen/"$folder_name"
@@ -80,7 +87,13 @@ for dir in ../../data/*/; do
     echo "Copying source files to gen/${folder_name}..."
     cp "$realdir"/base.xml "$realdist"/base.xml
     cp "$realdir"/evolution_a.xml "$realdist"/evolution_a.xml
-    cp "$realdir"/evolution_b.xml "$realdist"/evolution_b.xml
+
+    # move evolution_b.xml to gen/ if it exists
+    if [ -f "$realdir/evolution_b.xml" ]; then
+      echo "Copying evolution_b.xml to gen/${folder_name}..."
+    else
+      echo "evolution_b.xml not found, skipping..."
+    fi
 
     cp "../../meta/XSL/graph.xsd" "$realdist"/graph.xsd
     cp "../../meta/XSL/operations.xsd" "$realdist"/operations.xsd
@@ -90,8 +103,14 @@ for dir in ../../data/*/; do
 
     echo "Updating evolution.xml to use local operations.xsd..."
     sed -i '' 's|\.\./\.\./meta/XSL/operations.xsd|operations.xsd|g' "$realdist"/evolution_a.xml
-    sed -i '' 's|\.\./\.\./meta/XSL/operations.xsd|operations.xsd|g' "$realdist"/evolution_b.xml
 
+    # update evolution_b only if it exists
+    if [ -f "$realdist/evolution_b.xml" ]; then
+       sed -i '' 's|\.\./\.\./meta/XSL/operations.xsd|operations.xsd|g' "$realdist"/evolution_b.xml
+    else
+      echo "evolution_b.xml not found, skipping update..."
+    fi
+   
     echo "Generating evolutions for $folder_name..."
 
     echo "---"
@@ -99,10 +118,17 @@ for dir in ../../data/*/; do
     output=$(python3 evolve.py "$realdir"/base.xml "$realdist"/graph.xsd "$realdist"/evolution_a.xml "$realdist"/operations.xsd "$realdist"/graph_a.xml ../../meta/XSL/graph_template.xml)
     echo "$output"
 
-    echo "---"
-    echo "Run evolve.py for evolution_b.xml..."
-    output=$(python3 evolve.py "$realdir"/base.xml "$realdist"/graph.xsd "$realdist"/evolution_b.xml "$realdist"/operations.xsd "$realdist"/graph_b.xml ../../meta/XSL/graph_template.xml)
-    echo "$output"
+    # if evolution_b.xml exists, run evolve.py for it
+    if [ ! -f "$realdist/evolution_b.xml" ]; then
+      echo "evolution_b.xml not found, skipping evolution_b..."
+      echo "completed."
+      continue
+    else
+      echo "---"
+      echo "Run evolve.py for evolution_b.xml..."
+      output=$(python3 evolve.py "$realdir"/base.xml "$realdist"/graph.xsd "$realdist"/evolution_b.xml "$realdist"/operations.xsd "$realdist"/graph_b.xml ../../meta/XSL/graph_template.xml)
+      echo "$output"
+    fi
 
     echo "---"
     echo "Done."
@@ -140,14 +166,25 @@ for gen in ../../gen/*/; do
     echo "Processing generated graphs in directory: $realdir"
     echo "base model: $realdir/base.xml"
     echo "evolution a: $realdir/graph_a.xml"
-    echo "evolution b: $realdir/graph_b.xml"
+    if [ ! -f "$realdir/graph_b.xml" ]; then
+      echo "graph_b.xml not found, skipping..."
+      continue
+    else
+      echo "evolution b: $realdir/graph_b.xml"
+    fi
 
     echo "Generating PlantUML diagrams for $folder_name..."
 
     python convert.py "$realdir"/base.xml "$realdir"/graph.xsd "$realdir/"base.puml
     python convert.py "$realdir"/graph_a.xml "$realdir"/graph.xsd "$realdir/"graph_a.puml
-    python convert.py "$realdir"/graph_b.xml "$realdir"/graph.xsd "$realdir/"graph_b.puml
-
+    # if graph_b.xml exists, convert it to PlantUML
+    if [ ! -f "$realdir/graph_b.xml" ]; then
+      echo "graph_b.xml not found, skipping conversion..."
+      continue
+    else
+      python convert.py "$realdir"/graph_b.xml "$realdir"/graph.xsd "$realdir/"graph_b.puml
+    fi
+    
     echo "Done."
     echo "Rendering PlantUML diagrams into PNGs for $folder_name..."
 
