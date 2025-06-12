@@ -47,7 +47,7 @@
                                 
                                     <!-- DELETIONS -->
 
-                                    <!-- delete a node, the all of the node's properties must be deleted beforehand -->
+                                    <!-- delete a node, connecting edges (incoming and outgoing) are deleted automatically -->
                                     <xs:element name="DeleteNode">
                                         <xs:complexType>
                                             <xs:attribute name="nodeName" type="xs:anyURI" use="required"/>
@@ -71,7 +71,7 @@
                                         </xs:complexType>
                                     </xs:element>
 
-                                    <!-- remove paroperty from a specified node. This is not ambigious as both node and properties are unique-->
+                                    <!-- remove property from a specified node. This is not ambigious as both node and properties are unique-->
                                     <xs:element name="DeleteProperty">
                                         <xs:complexType>
                                             <xs:attribute name="nodeName" type="xs:anyURI" use="required"/>
