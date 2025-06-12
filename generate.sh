@@ -89,10 +89,11 @@ for dir in ../../data/*/; do
     cp "$realdir"/evolution_a.xml "$realdist"/evolution_a.xml
 
     # move evolution_b.xml to gen/ if it exists
-    if [ -f "$realdir/evolution_b.xml" ]; then
-      echo "Copying evolution_b.xml to gen/${folder_name}..."
-    else
+    if [ ! -f "$realdir/evolution_b.xml" ]; then
       echo "evolution_b.xml not found, skipping..."
+    else
+      echo "Copying evolution_b.xml to gen/${folder_name}..."
+      cp "$realdir"/evolution_b.xml "$realdist"/evolution_b.xml
     fi
 
     cp "../../meta/XSL/graph.xsd" "$realdist"/graph.xsd
