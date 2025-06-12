@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Add a shop comonent with several subcomponents to the social platform.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="Shop" groupName="SocialPlatformComponents" />
+        </Operation>
+        <Operation index="1">
+            <AddNode nodeName="FeaturedProductStore" groupName="SocialPlatformComponents" />
+        </Operation>
+        <Operation index="2">
+            <AddNode nodeName="Marketplace" groupName="SocialPlatformComponents"/>
+        </Operation>
+        <Operation index="3">
+            <AddNode nodeName="C2CStore" groupName="SocialPlatformComponents" />
+        </Operation>
+        <Operation index="4">
+            <AddNode nodeName="AuctionStore" groupName="SocialPlatformComponents" />
+        </Operation>
+        <Operation index="5">
+            <AddDirectedEdge start="Platform" end="Shop" semantics="composed-of" />
+        </Operation>
+        <Operation index="6">
+            <AddDirectedEdge start="Shop" end="FeaturedProductStore" semantics="composed-of" />
+        </Operation>
+        <Operation index="7">
+            <AddDirectedEdge start="Shop" end="Marketplace" semantics="composed-of" />
+        </Operation>
+        <Operation index="8">
+            <AddDirectedEdge start="Marketplace" end="C2CStore" semantics="composed-of" />
+        </Operation>
+        <Operation index="9">
+            <AddDirectedEdge start="Marketplace" end="AuctionStore" semantics="composed-of" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

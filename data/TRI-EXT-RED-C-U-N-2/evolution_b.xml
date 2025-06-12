@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REDUCE</Category>
+            <Description>
+                Remove the direct messaging board from the social platform components.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <DeleteNode nodeName="DirectMessagingBoard" groupName="SocialPlatformComponents" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

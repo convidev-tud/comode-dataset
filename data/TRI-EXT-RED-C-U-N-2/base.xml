@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="SocialPlatformComponents">
+        <Node name="Platform"/>
+        <Node name="NewsFeed"/>
+        <Node name="DirectMessagingBoard"/>
+        <Node name="UserManagement"/>
+        <Node name="FollowerManagement"/>
+        <Node name="AccountSettings"/>
+        <Node name="Login"/>
+        <Node name="SecuritySettings"/>
+    </Group>
+
+    <DirectedEdge start="Platform" end="NewsFeed" semantics="composed-of"/>
+    <DirectedEdge start="Platform" end="DirectMessagingBoard" semantics="composed-of"/>
+    <DirectedEdge start="Platform" end="UserManagement" semantics="composed-of"/>
+    <DirectedEdge start="UserManagement" end="FollowerManagement" semantics="composed-of"/>
+    <DirectedEdge start="UserManagement" end="AccountSettings" semantics="composed-of"/>
+    <DirectedEdge start="UserManagement" end="Login" semantics="composed-of"/>
+    <DirectedEdge start="UserManagement" end="SecuritySettings" semantics="composed-of"/>
+</Graph>
