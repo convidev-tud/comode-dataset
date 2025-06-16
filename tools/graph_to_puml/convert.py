@@ -46,7 +46,14 @@ def xml_to_puml(input_root):
             if tag == "Property":
                 puml += elem.get("name") + "\n"
             if tag == "DirectedEdge":
-                puml += "%s --> %s : %s\n" % (elem.get("start"), elem.get("end"), elem.get("semantics"))
+                startmult = ""
+                endmult = ""
+                if elem.get("startmult") is not None:
+                    startmult = "\"%s\"" % str(elem.get("startmult"))
+                if elem.get("endmult") is not None:
+                    endmult = "\"%s\"" % str(elem.get("endmult"))
+                    
+                puml += "%s %s --> %s %s : %s\n" % (elem.get("start"), startmult, endmult, elem.get("end"), elem.get("semantics"))
             
         if action == "end":
             if tag == "Graph":

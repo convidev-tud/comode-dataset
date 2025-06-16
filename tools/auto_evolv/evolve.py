@@ -21,10 +21,12 @@ import sys
 # GRAPH CLASS DEFINITIONS
 
 class DirectedEdge:
-    def __init__(self, start: str, end: str, semantics: str):
+    def __init__(self, start: str, end: str, semantics: str, startmult: int | None = None, endmult: int | None = None):
         self.start: str = start
         self.end: str = end
         self.semantics: str = semantics
+        self.startmult: int | None = startmult
+        self.endmult: int | None = endmult
         
     def __str__(self):
         return self.start + " -> " + self.end + ": " + self.semantics
@@ -301,7 +303,7 @@ def parse_graph(input_root) -> Graph:
             if tag == "Property":
                 res = graph.add_property(active_node.name, elem.get("name"))
             if tag == "DirectedEdge":
-                res = graph.add_directed_edge(DirectedEdge(elem.get("start"), elem.get("end"), elem.get("semantics")))
+                res = graph.add_directed_edge(DirectedEdge(elem.get("start"), elem.get("end"), elem.get("semantics"), elem.get("startmult"), elem.get("endmult")))
                 
         if action == "end":
             if tag == "Graph":
@@ -359,7 +361,9 @@ def apply_add_directed_edge(graph: Graph, elem) -> bool:
     start = elem.get("start")
     end = elem.get("end")
     semantics = elem.get("semantics")
-    return graph.add_directed_edge(DirectedEdge(start, end, semantics))
+    startmult = elem.get("startmult")
+    endmult = elem.get("endmult")
+    return graph.add_directed_edge(DirectedEdge(start, end, semantics, startmult, endmult))
 
 def apply_add_group(graph: Graph, elem) -> bool:
     group_name = elem.get("groupName")
@@ -389,9 +393,11 @@ def apply_rename_node(graph: Graph, elem) -> bool:
 def apply_change_semantics_directed_edge(graph: Graph, elem) -> bool:
     start = elem.get("start")
     end = elem.get("end")
+    startmult = elem.get("startmult")
+    endmult = elem.get("endmult")
     oldSemantics = elem.get("oldSemantics")
     newSemantics = elem.get("newSemantics")
-    return graph.change_semantics_directed_edge(start, end, oldSemantics, newSemantics)
+    return graph.change_semantics_directed_edge(start, end, oldSemantics, newSemantics, startmult, endmult)
 
 def apply_move_node_to_other_group(graph: Graph, elem) -> bool:
     nodeName = elem.get("nodeName")
@@ -516,6 +522,10 @@ def build_directed_edge_xml(directed_edge: DirectedEdge):
     directed_edge_elem.set("start", directed_edge.start)
     directed_edge_elem.set("end", directed_edge.end)
     directed_edge_elem.set("semantics", directed_edge.semantics)
+    if directed_edge.startmult is not None:
+        directed_edge_elem.set("startmult", str(directed_edge.startmult))
+    if directed_edge.endmult is not None:
+        directed_edge_elem.set("endmult", str(directed_edge.endmult))
     return directed_edge_elem
 
 def serialize_graph(graph: Graph, output_path: str, template_path: str):
