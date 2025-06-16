@@ -1,5 +1,5 @@
 **TITEL**
-TRI-EXT-RED-A-U-N-1 (Abstract Example)
+TRI-EXT-RED-C-U-N-1 (Car Composition Example)
 
 **DESCRIPTION**
 Three-way extension vs. reduction example with not overlapping edits.

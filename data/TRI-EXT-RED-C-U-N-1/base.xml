@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="CarModel">
+        <Node name="Car"/>
+        <Node name="WheelModule"/>
+        <Node name="Wheel"/>
+        <Node name="BrakeSystem"/>
+        <Node name="GasEngine"/>
+        <Node name="ElectricEngine"/>
+    </Group>
+
+    <DirectedEdge start="Car" end="WheelModule" semantics="has" endmult="4"/>
+    <DirectedEdge start="Car" end="GasEngine" semantics="has" endmult="1"/>
+    <DirectedEdge start="Car" end="ElectricEngine" semantics="has" endmult="1"/>
+    <DirectedEdge start="WheelModule" end="Wheel" semantics="has" endmult="1"/>
+    <DirectedEdge start="WheelModule" end="BrakeSystem" semantics="has" endmult="1"/>
+</Graph>

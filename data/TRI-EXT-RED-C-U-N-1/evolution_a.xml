@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Extend the BrakeSystem component with both a mechanical and an electronic brake subcomponent.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="MechanicalBrake" groupName="CarModel" />
+        </Operation>
+        <Operation index="1">
+            <AddNode nodeName="ElectricalBrake" groupName="CarModel" />
+        </Operation>
+        <Operation index="3">
+            <AddNode nodeName="SteelDisc" groupName="CarModel" />
+        </Operation>
+        <Operation index="4">
+            <AddNode nodeName="BrakeShoe" groupName="CarModel" />
+        </Operation>
+        <Operation index="5">
+            <AddDirectedEdge start="BrakeSystem" end="MechanicalBrake" semantics="has" endmult="1"/>
+        </Operation>
+        <Operation index="6">
+            <AddDirectedEdge start="BrakeSystem" end="ElectricalBrake" semantics="has" endmult="1"/>
+        </Operation>
+        <Operation index="7">
+            <AddDirectedEdge start="MechanicalBrake" end="SteelDisc" semantics="has" endmult="1"/>
+        </Operation>
+        <Operation index="8">
+            <AddDirectedEdge start="MechanicalBrake" end="BrakeShoe" semantics="has" endmult="1"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>
