@@ -1,9 +1,8 @@
 **TITEL**
-TRI-EXT-RED-C-U-Y-1 (Car Components Example)
+TRI-EXT-RED-A-U-Y-1 (Abstract Example)
 
 **DESCRIPTION**
 Three-way extension vs. reduction example with overlapping edits.
-The removed vs. extended GasEngine could cause potential conflicts.
 
 **ANNOTATIONS**
 None

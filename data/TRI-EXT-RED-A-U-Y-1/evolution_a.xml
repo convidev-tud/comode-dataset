@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Extend the abstract model with two new nodes as children of the existing node D.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="F" groupName="M" />
+        </Operation>
+        <Operation index="1">
+            <AddNode nodeName="G" groupName="M" />
+        </Operation>
+        <Operation index="2">
+            <AddDirectedEdge start="D" end="F" semantics="contain" />
+        </Operation>
+        <Operation index="3">
+            <AddDirectedEdge start="D" end="G" semantics="contain" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>
