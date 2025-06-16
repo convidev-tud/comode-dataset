@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Extend the ElectricEngine component and GasEngine component with motor and energy storage subcomponents.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="ElectricMotor" groupName="CarModel" />
+        </Operation>
+        <Operation index="1">
+            <AddNode nodeName="Accu" groupName="CarModel" />
+        </Operation>
+        <Operation index="2">
+            <AddNode nodeName="GasTank" groupName="CarModel"/>
+        </Operation>
+        <Operation index="3">
+            <AddNode nodeName="V6OttoEngine" groupName="CarModel" />
+        </Operation>
+        <Operation index="4">
+            <AddDirectedEdge start="ElectricSubsystem" end="ElectricMotor" semantics="composed-of" />
+        </Operation>
+        <Operation index="5">
+            <AddDirectedEdge start="ElectricSubsystem" end="Accu" semantics="composed-of" />
+        </Operation>
+        <Operation index="6">
+            <AddDirectedEdge start="GasSubsystem" end="V6OttoEngine" semantics="composed-of" />
+        </Operation>
+        <Operation index="7">
+            <AddDirectedEdge start="GasSubsystem" end="GasTank" semantics="composed-of" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

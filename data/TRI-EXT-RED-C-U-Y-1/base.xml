@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="CarModel">
+        <Node name="Car"/>
+        <Node name="Cabin"/>
+        <Node name="ElectricSubsystem"/>
+        <Node name="GasSubsystem"/>
+        <Node name="BrakeSystem"/>
+    </Group>
+
+    <DirectedEdge start="Car" end="Cabin" semantics="composed-of"/>
+    <DirectedEdge start="Car" end="ElectricSubsystem" semantics="composed-of"/>
+    <DirectedEdge start="Car" end="GasSubsystem" semantics="composed-of"/>
+    <DirectedEdge start="Car" end="BrakeSystem" semantics="composed-of"/>
+</Graph>
