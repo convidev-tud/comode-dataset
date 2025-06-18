@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REFINE</Category>
+            <Description>
+                Remove the UserService from the WeatherApp.
+                This also removes the PrivateArea node, as it is no longer needed.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <DeleteNode nodeName="UserService" groupName="AppStructure" />
+        </Operation>
+        <Operation index="1">
+            <DeleteNode nodeName="PrivateArea" groupName="AppStructure" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="AppStructure">
+        <Node name="WeatherApp"/>
+        <Node name="WebFrontend"/>
+        <Node name="PublicArea"/>
+        <Node name="PrivateArea"/>
+        <Node name="UserService"/>
+        <Node name="WeatherService"/>
+        <Node name="LocalWeather">
+            <Property name="Temperature" />
+            <Property name="Humidity" />
+        </Node>
+        <Node name="GlobalWeather"/>
+        <Node name="WeatherHistory"/>
+    </Group>
+
+    <DirectedEdge start="WeatherApp" end="WebFrontend" semantics="has"/>
+    <DirectedEdge start="WeatherApp" end="UserService" semantics="has"/>
+    <DirectedEdge start="WeatherApp" end="WeatherService" semantics="has"/>
+    <DirectedEdge start="WebFrontend" end="PublicArea" semantics="has"/>
+    <DirectedEdge start="WebFrontend" end="PrivateArea" semantics="has"/>
+    <DirectedEdge start="WeatherService" end="LocalWeather" semantics="has"/>
+    <DirectedEdge start="WeatherService" end="GlobalWeather" semantics="has"/>
+    <DirectedEdge start="WeatherService" end="WeatherHistory" semantics="has"/>
+</Graph>
