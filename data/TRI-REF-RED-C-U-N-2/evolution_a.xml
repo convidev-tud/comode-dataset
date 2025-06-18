@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REDUCE</Category>
+            <Description>
+                Remove the Gripper and its sub-nodes.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <DeleteNode nodeName="ForceSensor" groupName="RobotComponents" />
+        </Operation>
+        <Operation index="1">
+            <DeleteNode nodeName="Servo" groupName="RobotComponents" />
+        </Operation>
+        <Operation index="2">
+            <DeleteNode nodeName="Gripper" groupName="RobotComponents" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>
