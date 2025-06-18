@@ -7,26 +7,23 @@
         <Semantic>
             <Category>REFINE</Category>
             <Description>
-                Turn the properties of the LocalWeather node into sub-nodes (objectification).
+                Refine all leaf nodes by adding the colors of the animals as properties.
             </Description>
         </Semantic>
         <Operation index="0">
-            <AddNode nodeName="Temperature" groupName="AppStructure" />
+            <AddProperty nodeName="BritishShorthair" propertyName="Color=GREY" />
         </Operation>
         <Operation index="1">
-            <DeleteProperty nodeName="LocalWeather" propertyName="Temperature" />
+            <AddProperty nodeName="Siam" propertyName="Color=CREAM" />
         </Operation>
         <Operation index="2">
-            <AddDirectedEdge start="LocalWeather" end="Temperature" semantics="has" />
+            <AddProperty nodeName="Labrador" propertyName="Color=BLONDE" />
         </Operation>
         <Operation index="3">
-            <AddNode nodeName="Humidity" groupName="AppStructure" />
+            <AddProperty nodeName="Husky" propertyName="Color=GREY" />
         </Operation>
         <Operation index="4">
-            <DeleteProperty nodeName="LocalWeather" propertyName="Humidity" />
-        </Operation>
-        <Operation index="5">
-            <AddDirectedEdge start="LocalWeather" end="Humidity" semantics="has" />
+            <AddProperty nodeName="Corgy" propertyName="Color=BLONDE" />
         </Operation>
     </SemanticEdit>
 

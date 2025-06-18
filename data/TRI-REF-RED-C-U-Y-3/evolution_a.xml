@@ -7,15 +7,11 @@
         <Semantic>
             <Category>REDUCE</Category>
             <Description>
-                Remove the UserService from the WeatherApp.
-                This also removes the PrivateArea node, as it is no longer needed.
+                Remove the Husky node.
             </Description>
         </Semantic>
         <Operation index="0">
-            <DeleteNode nodeName="UserService" groupName="AppStructure" />
-        </Operation>
-        <Operation index="1">
-            <DeleteNode nodeName="PrivateArea" groupName="AppStructure" />
+            <DeleteNode nodeName="Husky" groupName="AnimalCategories" />
         </Operation>
     </SemanticEdit>
 
