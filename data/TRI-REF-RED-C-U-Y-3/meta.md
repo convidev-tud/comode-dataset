@@ -1,5 +1,5 @@
 **TITEL**
-TRI-REF-RED-C-U-N-3 (Cats and Dogs Example)
+TRI-REF-RED-C-U-Y-3 (Cats and Dogs Example)
 
 **DESCRIPTION**
 Three-way refinement vs. reduction example with overlapping edits.

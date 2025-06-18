@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="RobotComponents">
+        <Node name="Robot"/>
+        <Node name="Platform"/>
+        <Node name="BasePlate"/>
+        <Node name="PowerSupply"/>
+        <Node name="Controller"/>
+        <Node name="Gripper"/>
+        <Node name="ForceSensor"/>
+        <Node name="Servo"/>
+        <Node name="Arm"/>
+        <Node name="Joint"/>
+        <Node name="Connector"/>
+    </Group>
+
+    <DirectedEdge start="Robot" end="Platform" semantics="part" endmult="1"/>
+    <DirectedEdge start="Platform" end="BasePlate" semantics="part" endmult="1"/>
+    <DirectedEdge start="Platform" end="PowerSupply" semantics="part" endmult="1"/>
+    <DirectedEdge start="Platform" end="Controller" semantics="part" endmult="1"/>
+    <DirectedEdge start="Robot" end="Gripper" semantics="part" endmult="1"/>
+    <DirectedEdge start="Gripper" end="ForceSensor" semantics="part" endmult="2"/>
+    <DirectedEdge start="Gripper" end="Servo" semantics="part" endmult="1"/>
+    <DirectedEdge start="Robot" end="Arm" semantics="part" endmult="1"/>
+    <DirectedEdge start="Arm" end="Joint" semantics="part" endmult="*"/>
+    <DirectedEdge start="Arm" end="Connector" semantics="part" endmult="*"/>
+</Graph>

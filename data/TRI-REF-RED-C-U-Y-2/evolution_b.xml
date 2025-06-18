@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REFINE</Category>
+            <Description>
+                Add details to the Gripper and its sub-nodes.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddProperty nodeName="Gripper" propertyName="manufacturer" />
+        </Operation>
+        <Operation index="1">
+            <AddProperty nodeName="Gripper" propertyName="maxSpan" />
+        </Operation>
+        <Operation index="2">
+            <AddProperty nodeName="Servo" propertyName="workingAngle" />
+        </Operation>
+        <Operation index="3">
+            <AddProperty nodeName="Servo" propertyName="powerConsumption" />
+        </Operation>
+        <Operation index="4">
+            <AddProperty nodeName="ForceSensor" propertyName="protocol" />
+        </Operation>
+        <Operation index="5">
+            <AddProperty nodeName="ForceSensor" propertyName="unit" />
+        </Operation>
+        <Operation index="6">
+            <AddProperty nodeName="ForceSensor" propertyName="threshold" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>
