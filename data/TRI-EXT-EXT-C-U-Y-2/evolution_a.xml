@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Extend the Brake with disk and shoe.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="CeramicDisc" groupName="CarModel" />
+        </Operation>
+        <Operation index="1">
+            <AddDirectedEdge start="Brake" end="CeramicDisc" semantics="has" endmult="1"/>
+        </Operation>
+        <Operation index="2">
+            <AddNode nodeName="PerformanceShoe" groupName="CarModel" />
+        </Operation>
+        <Operation index="3">
+            <AddDirectedEdge start="Brake" end="PerformanceShoe" semantics="has" endmult="1"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>
