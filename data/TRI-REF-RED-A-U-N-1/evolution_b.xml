@@ -15,6 +15,7 @@
         </Operation>
         <Operation index="1">
             <DeleteProperty nodeName="D" propertyName="x" />
+        </Operation>
     </SemanticEdit>
 
 </Evolution>

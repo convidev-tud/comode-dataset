@@ -6,7 +6,7 @@
     <Group name="University">
         <Node name="Chair"/>
         <Node name="Employee"/>
-        <Node name="Scientific Staff"/>
+        <Node name="ScientificStaff"/>
         <Node name="Secretary"/>
         <Node name="Professor"/>
         <Node name="Postdoc"/>
@@ -14,9 +14,9 @@
     </Group>
 
     <DirectedEdge start="Chair" end="Employee" semantics="consists" endmult="2..*"/>
-    <DirectedEdge start="Employee" end="Scientific Staff" semantics="consists" endmult="*"/>
-    <DirectedEdge start="Scientific Staff" end="Postdoc" semantics="consists" endmult="*"/>
-    <DirectedEdge start="Scientific Staff" end="Researcher" semantics="consists" endmult="*"/> 
+    <DirectedEdge start="Employee" end="ScientificStaff" semantics="consists" endmult="*"/>
+    <DirectedEdge start="ScientificStaff" end="Postdoc" semantics="consists" endmult="*"/>
+    <DirectedEdge start="ScientificStaff" end="Researcher" semantics="consists" endmult="*"/> 
     <DirectedEdge start="Employee" end="Secretary" semantics="consists" endmult="1"/>
     <DirectedEdge start="Employee" end="Professor" semantics="consists" endmult="1"/>
 </Graph>
