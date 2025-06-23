@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REFINE</Category>
+            <Description>
+                Refine the parameter definition.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddProperty nodeName="ParameterDefinition" propertyName="isArrayLike" />
+        </Operation>
+        <Operation index="1">
+            <AddNode nodeName="OptionalClause" groupName="OOP" />
+        </Operation>
+        <Operation index="2">
+            <AddDirectedEdge start="ParameterDefinition" end="OptionalClause" semantics="contains" endmult="0..1"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

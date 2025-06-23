@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+      <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Add corgie and belgian and german shepherd to the dog model.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="Corgy" groupName="Animals" />
+        </Operation>
+        <Operation index="1">
+            <AddDirectedEdge start="Dogs" end="Corgy" semantics="subset" />
+        </Operation>
+        <Operation index="2">
+            <AddNode nodeName="BelgianShepherd" groupName="Animals" />
+        </Operation>
+        <Operation index="3">
+            <AddDirectedEdge start="Shepherd" end="BelgianShepherd" semantics="subset" />
+        </Operation>
+        <Operation index="4">
+            <AddNode nodeName="GermanShepherd" groupName="Animals" />
+        </Operation>
+        <Operation index="5">
+            <AddDirectedEdge start="Shepherd" end="GermanShepherd" semantics="subset" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

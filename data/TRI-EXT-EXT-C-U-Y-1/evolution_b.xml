@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+      <SemanticEdit index="0">
+       <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Extend the Method structure.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="Header" groupName="OOP"/>
+        </Operation>
+        <Operation index="1">
+            <AddDirectedEdge start="Method" end="Header" semantics="contains" endmult="1"/>
+        </Operation>
+        <Operation index="4">
+            <AddNode nodeName="Name" groupName="OOP"/>
+        </Operation>
+        <Operation index="5">
+            <AddDirectedEdge start="Header" end="Name" semantics="contains" endmult="1"/>
+        </Operation>
+        <Operation index="6">
+            <AddNode nodeName="Argument" groupName="OOP"/>
+        </Operation>
+        <Operation index="7">
+            <AddDirectedEdge start="Header" end="Argument" semantics="contains" endmult="*"/>
+        </Operation>
+        <Operation index="8">
+            <AddNode nodeName="Statement" groupName="OOP"/>
+        </Operation>
+        <Operation index="9">
+            <AddDirectedEdge start="Method" end="Statement" semantics="contains" endmult="*"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

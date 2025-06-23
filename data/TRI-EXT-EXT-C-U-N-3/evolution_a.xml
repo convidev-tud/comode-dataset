@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Add birds to the pets model.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="Birds" groupName="Animals" />
+        </Operation>
+        <Operation index="1">
+            <AddDirectedEdge start="Pets" end="Birds" semantics="subset" />
+        </Operation>
+        <Operation index="2">
+            <AddNode nodeName="Parrot" groupName="Animals" />
+        </Operation>
+        <Operation index="3">
+            <AddDirectedEdge start="Birds" end="Parrot" semantics="subset" />
+        </Operation>
+        <Operation index="4">
+            <AddNode nodeName="Canary" groupName="Animals" />
+        </Operation>
+        <Operation index="5">
+            <AddDirectedEdge start="Birds" end="Canary" semantics="subset" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Extend the Y Node with K, L, M, and N.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="K" groupName="Model"/>
+        </Operation>
+        <Operation index="1">
+            <AddDirectedEdge start="Y" end="K" semantics="composed-of" endmult="*"/>
+        </Operation>
+        <Operation index="2">
+            <AddNode nodeName="L" groupName="Model"/>
+        </Operation>
+        <Operation index="3">
+            <AddDirectedEdge start="Y" end="L" semantics="composed-of" endmult="*"/>
+        </Operation>
+        <Operation index="4">
+            <AddNode nodeName="M" groupName="Model"/>
+        </Operation>
+        <Operation index="5">
+            <AddDirectedEdge start="L" end="M" semantics="composed-of" endmult="*"/>
+        </Operation>
+        <Operation index="6">
+            <AddNode nodeName="N" groupName="Model"/>
+        </Operation>
+        <Operation index="7">
+            <AddDirectedEdge start="L" end="N" semantics="composed-of" endmult="*"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="Animals">
+        <Node name="Pets"/>
+        <Node name="Cats"/>
+        <Node name="Dogs"/>
+        <Node name="Persian"/>
+        <Node name="Siamese"/>
+        <Node name="Shepherd"/>
+        <Node name="Husky"/>
+    </Group>
+
+    <DirectedEdge start="Pets" end="Cats" semantics="subset" />
+    <DirectedEdge start="Pets" end="Dogs" semantics="subset" />
+    <DirectedEdge start="Cats" end="Persian" semantics="subset" />
+    <DirectedEdge start="Cats" end="Siamese" semantics="subset" />
+    <DirectedEdge start="Dogs" end="Shepherd" semantics="subset" />
+    <DirectedEdge start="Dogs" end="Husky" semantics="subset" />
+</Graph>
