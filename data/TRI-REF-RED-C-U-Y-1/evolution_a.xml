@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REDUCE</Category>
+            <Description>
+                Remove the constructor and its argument node.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <DeleteNode nodeName="Argument" groupName="OOP" />
+        </Operation>
+        <Operation index="1">
+            <DeleteNode nodeName="Constructor" groupName="OOP" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="OOP">
+        <Node name="Class"/>
+        <Node name="Method"/>
+        <Node name="Import"/>
+        <Node name="Constructor">
+            <Property name="isPrimary" />
+        </Node>
+        <Node name="Header"/>
+        <Node name="Statement"/>
+        <Node name="Argument"/>
+    </Group>
+
+    <DirectedEdge start="Class" end="Method" semantics="has" endmult="*"/>
+    <DirectedEdge start="Class" end="Import" semantics="has" endmult="*"/>
+    <DirectedEdge start="Class" end="Constructor" semantics="has" endmult="*"/>
+    <DirectedEdge start="Method" end="Header" semantics="has" endmult="1"/>
+    <DirectedEdge start="Method" end="Statement" semantics="hase" endmult="1..*"/>
+    <DirectedEdge start="Constructor" end="Argument" semantics="has" endmult="*"/>
+</Graph>
