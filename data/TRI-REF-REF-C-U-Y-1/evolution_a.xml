@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REFINE</Category>
+            <Description>
+                Apply the "Performance" profile to the car.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <DeleteProperty nodeName="Engine" propertyName="Power" />
+        </Operation>
+        <Operation index="1">
+            <AddProperty nodeName="Engine" propertyName="type=Performance" />
+        </Operation>
+        <Operation index="2">
+            <AddProperty nodeName="Engine" propertyName="Power=300KW" />
+        </Operation>
+        <Operation index="3">
+            <AddProperty nodeName="BrakeSystem" propertyName="type=Performance" />
+        </Operation>
+        <Operation index="4">
+            <DeleteNode nodeName="Disc" groupName="CarModel" />
+        </Operation>
+        <Operation index="5">
+            <AddNode nodeName="CeramicDisc" groupName="CarModel"/>
+        </Operation>
+        <Operation index="6">
+            <AddDirectedEdge start="BrakeSystem" end="CeramicDisc" semantics="has" endmult="4"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

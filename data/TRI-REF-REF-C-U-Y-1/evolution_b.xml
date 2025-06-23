@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REFINE</Category>
+            <Description>
+                Refine the car and its engine to be family-friendly.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddProperty nodeName="Car" propertyName="edition=Family" />
+        </Operation>
+        <Operation index="1">
+            <DeleteProperty nodeName="Engine" propertyName="Power" />
+        </Operation>
+        <Operation index="2">
+            <AddProperty nodeName="Engine" propertyName="Power=180KW" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>
