@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+      <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Extend the Trunk and add a Crown with Branch and Leaf.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="Wood" groupName="Forest" />
+        </Operation>
+        <Operation index="1">
+            <AddDirectedEdge start="Trunk" end="Wood" semantics="composed-of" />
+        </Operation>
+        <Operation index="2">
+            <AddNode nodeName="Bork" groupName="Forest" />
+        </Operation>
+        <Operation index="3">
+            <AddDirectedEdge start="Trunk" end="Bork" semantics="composed-of" />
+        </Operation>
+        <Operation index="4">
+            <AddNode nodeName="Crown" groupName="Forest"/>
+        </Operation>
+        <Operation index="5">
+            <AddDirectedEdge start="Tree" end="Crown" semantics="composed-of"/>
+        </Operation>
+        <Operation index="6">
+            <AddNode nodeName="Branch" groupName="Forest"/>
+        </Operation>
+        <Operation index="7">
+            <AddDirectedEdge start="Crown" end="Branch" semantics="composed-of"/>
+        </Operation>
+        <Operation index="8">
+            <AddNode nodeName="Leaf" groupName="Forest"/>
+        </Operation>
+        <Operation index="9">
+            <AddDirectedEdge start="Branch" end="Leaf" semantics="composed-of"/>
+        </Operation>
+        <Operation index="10">
+            <AddDirectedEdge start="Branch" end="Wood" semantics="composed-of"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

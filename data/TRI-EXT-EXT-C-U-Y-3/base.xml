@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="Forest">
+        <Node name="Tree"/>
+        <Node name="Root"/>
+        <Node name="Trunk"/>
+    </Group>
+
+    <DirectedEdge start="Tree" end="Root" semantics="composed-of"/>
+    <DirectedEdge start="Tree" end="Trunk" semantics="composed-of"/>
+</Graph>
