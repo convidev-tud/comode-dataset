@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="University">
+        <Node name="Chair"/>
+        <Node name="Employee"/>
+        <Node name="Scientific Staff"/>
+        <Node name="Secretary"/>
+        <Node name="Professor"/>
+        <Node name="Postdoc"/>
+        <Node name="Researcher"/>
+    </Group>
+
+    <DirectedEdge start="Chair" end="Employee" semantics="consists" endmult="2..*"/>
+    <DirectedEdge start="Employee" end="Scientific Staff" semantics="consists" endmult="*"/>
+    <DirectedEdge start="Scientific Staff" end="Postdoc" semantics="consists" endmult="*"/>
+    <DirectedEdge start="Scientific Staff" end="Researcher" semantics="consists" endmult="*"/> 
+    <DirectedEdge start="Employee" end="Secretary" semantics="consists" endmult="1"/>
+    <DirectedEdge start="Employee" end="Professor" semantics="consists" endmult="1"/>
+</Graph>

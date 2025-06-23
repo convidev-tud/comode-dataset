@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REFINE</Category>
+            <Description>
+                Refine Postdoc and Researcher with addtional properties.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddProperty nodeName="Postdoc" propertyName="isTenured" />
+        </Operation>
+        <Operation index="1">
+            <AddProperty nodeName="Postdoc" propertyName="isHabilitated" />
+        </Operation>
+        <Operation index="2">
+            <AddProperty nodeName="Researcher" propertyName="PhDTopic" />
+        </Operation>
+        <Operation index="3">
+            <AddProperty nodeName="Researcher" propertyName="ProjectType" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REFINE</Category>
+            <Description>
+                Refine Secretary and Professor with addtional properties.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddProperty nodeName="Secretary" propertyName="fullPosition" />
+        </Operation>
+        <Operation index="1">
+            <AddProperty nodeName="Professor" propertyName="doesTeaching" />
+        </Operation>
+        <Operation index="2">
+            <AddProperty nodeName="Professor" propertyName="isEmirated" />
+        </Operation>
+        <Operation index="3">
+            <AddProperty nodeName="Professor" propertyName="isHonorary" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

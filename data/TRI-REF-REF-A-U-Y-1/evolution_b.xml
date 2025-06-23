@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REFINE</Category>
+            <Description>
+                Refine B, K and S with addtional properties.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddProperty nodeName="B" propertyName="z=g" />
+        </Operation>
+        <Operation index="1">
+            <DeleteProperty nodeName="K" propertyName="a" />
+        </Operation>
+        <Operation index="2">
+            <AddProperty nodeName="K" propertyName="a=b" />
+        </Operation>
+        <Operation index="3">
+            <DeleteProperty nodeName="K" propertyName="b" />
+        </Operation>
+        <Operation index="4">
+            <AddProperty nodeName="K" propertyName="b=alpha" />
+        </Operation>
+        <Operation index="5">
+            <AddProperty nodeName="K" propertyName="d" />
+        </Operation>
+        <Operation index="6">
+            <AddProperty nodeName="S" propertyName="k" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>
