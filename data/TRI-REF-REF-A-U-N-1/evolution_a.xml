@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REFINE</Category>
+            <Description>
+                Refine B, C, and D.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddProperty nodeName="B" propertyName="t=5" />
+        </Operation>
+        <Operation index="1">
+            <AddProperty nodeName="C" propertyName="c=19" />
+        </Operation>
+        <Operation index="2">
+            <AddProperty nodeName="D" propertyName="d=9" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

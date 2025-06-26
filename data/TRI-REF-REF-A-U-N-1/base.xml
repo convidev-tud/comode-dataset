@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="Model">
+        <Node name="A"/>
+        <Node name="B"/>
+        <Node name="C"/>
+        <Node name="D"/>
+        <Node name="E">
+            <Property name="x" />
+            <Property name="k" />
+        </Node>
+    </Group>
+
+    <DirectedEdge start="A" end="B" semantics="subset" />
+    <DirectedEdge start="A" end="E" semantics="subset" />
+    <DirectedEdge start="B" end="C" semantics="subset" />
+    <DirectedEdge start="B" end="D" semantics="subset" />
+</Graph>

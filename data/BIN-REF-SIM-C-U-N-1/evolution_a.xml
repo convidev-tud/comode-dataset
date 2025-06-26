@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REFINE</Category>
+            <Description>
+                Add to the BrakeSystem, Disc and Shoe
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddProperty nodeName="BrakeSystem" propertyName="type" />
+        </Operation>
+        <Operation index="1">
+            <AddProperty nodeName="Shoe" propertyName="brakePower" />
+        </Operation>
+        <Operation index="2">
+            <AddProperty nodeName="Disc" propertyName="isCeramic" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

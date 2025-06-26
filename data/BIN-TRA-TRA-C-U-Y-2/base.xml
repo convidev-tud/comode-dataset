@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="Transportation">
+        <Node name="Vehicle"/>
+        <Node name="Engine">
+            <Property name="PowerConsumption" />
+        </Node>
+        <Node name="Cabin"/>
+        <Node name="Seet"/>
+        <Node name="Wheel">
+            <Property name="radius" />
+            <Property name="material" />
+        </Node>
+    </Group>
+
+    <DirectedEdge start="Vehicle" end="Engine" semantics="has" endmult="1"/>
+    <DirectedEdge start="Vehicle" end="Cabin" semantics="has" endmult="1"/>
+    <DirectedEdge start="Cabin" end="Seet" semantics="has" endmult="1..*"/>
+    <DirectedEdge start="Vehicle" end="Wheel" semantics="has" endmult="2..*"/>
+</Graph>

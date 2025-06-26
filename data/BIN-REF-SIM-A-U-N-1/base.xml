@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="Model">
+        <Node name="A"/>
+        <Node name="B"/>
+        <Node name="C"/>
+        <Node name="D">
+            <Property name="d" />
+        </Node>
+        <Node name="X">
+            <Property name="a" />
+            <Property name="b" />
+        </Node>
+    </Group>
+
+    <DirectedEdge start="A" end="B" semantics="composed-of" />
+    <DirectedEdge start="A" end="C" semantics="composed-of" />
+    <DirectedEdge start="A" end="D" semantics="composed-of" />
+    <DirectedEdge start="C" end="X" semantics="composed-of" />
+</Graph>

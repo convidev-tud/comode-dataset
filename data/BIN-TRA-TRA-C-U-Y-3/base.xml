@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="FamilyModel">
+        <Node name="Family"/>
+        <Node name="Parents"/>
+        <Node name="Mother"/>
+        <Node name="Father"/>
+        <Node name="Children"/>
+    </Group>
+
+    <DirectedEdge start="Family" end="Parents" semantics="composed-of" />
+    <DirectedEdge start="Family" end="Children" semantics="composed-of" />
+    <DirectedEdge start="Parents" end="Mother" semantics="composed-of" />
+    <DirectedEdge start="Parents" end="Father" semantics="composed-of" />
+</Graph>

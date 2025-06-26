@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REPURPOSE</Category>
+            <Description>
+                Transfer the model from family to dog breeds.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <RenameGroup oldGroupName="FamilyModel" newGroupName="DogBreeds" />
+        </Operation>
+        <Operation index="1">
+            <RenameNode oldNodeName="Family" newNodeName="Dogs" />
+        </Operation>
+        <Operation index="2">
+            <RenameNode oldNodeName="Parents" newNodeName="Shepherd" />
+        </Operation>
+        <Operation index="3">
+            <RenameNode oldNodeName="Mother" newNodeName="GermanShepherd" />
+        </Operation>
+        <Operation index="4">
+            <RenameNode oldNodeName="Father" newNodeName="BegianShepherd" />
+        </Operation>
+        <Operation index="5">
+            <RenameNode oldNodeName="Children" newNodeName="Husky" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

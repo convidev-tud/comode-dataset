@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REPURPOSE</Category>
+            <Description>
+                Transfer the model from vehicle structure to plane strucutre
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <RenameNode oldNodeName="Vehicle" newNodeName="Plane" />
+        </Operation>
+        <Operation index="1">
+            <RenameNode oldNodeName="Engine" newNodeName="JetEngine" />
+        </Operation>
+        <Operation index="2">
+            <RenameNode oldNodeName="Wheel" newNodeName="Wing" />
+        </Operation>
+        <Operation index="3">
+            <DeleteProperty nodeName="Wing" propertyName="radius" />
+        </Operation>
+        <Operation index="4">
+            <DeleteProperty nodeName="Wing" propertyName="material" />
+        </Operation>
+        <Operation index="5">
+            <AddProperty nodeName="Wing" propertyName="span" />
+        </Operation>
+        <Operation index="6">
+            <DeleteDirectedEdge start="Plane" end="Wing" semantics="has" />
+        </Operation>
+        <Operation index="7">
+            <AddDirectedEdge start="Plane" end="Wing" semantics="has" endmult="2"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

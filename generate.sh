@@ -70,7 +70,6 @@ for dir in ../../data/*/; do
     
     if [ ! -f "$realdir/evolution_b.xml" ]; then
       echo "evolution_b.xml not found, skipping..."
-      continue
     else
       echo "evolution b: $realdir/evolution_b.xml"
     fi
@@ -123,7 +122,6 @@ for dir in ../../data/*/; do
     if [ ! -f "$realdist/evolution_b.xml" ]; then
       echo "evolution_b.xml not found, skipping evolution_b..."
       echo "completed."
-      continue
     else
       echo "---"
       echo "Run evolve.py for evolution_b.xml..."
@@ -169,7 +167,6 @@ for gen in ../../gen/*/; do
     echo "evolution a: $realdir/graph_a.xml"
     if [ ! -f "$realdir/graph_b.xml" ]; then
       echo "graph_b.xml not found, skipping..."
-      continue
     else
       echo "evolution b: $realdir/graph_b.xml"
     fi
@@ -181,7 +178,6 @@ for gen in ../../gen/*/; do
     # if graph_b.xml exists, convert it to PlantUML
     if [ ! -f "$realdir/graph_b.xml" ]; then
       echo "graph_b.xml not found, skipping conversion..."
-      continue
     else
       python convert.py "$realdir"/graph_b.xml "$realdir"/graph.xsd "$realdir/"graph_b.puml
     fi

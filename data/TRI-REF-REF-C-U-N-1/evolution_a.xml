@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REFINE</Category>
+            <Description>
+               Refine the brake system into a performance brake.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddProperty nodeName="BrakeSystem" propertyName="type=Performance" />
+        </Operation>
+        <Operation index="1">
+            <AddProperty nodeName="Disc" propertyName="material=Ceramic" />
+        </Operation>
+        <Operation index="2">
+            <DeleteNode nodeName="Shoe" groupName="CarModel" />
+        </Operation>
+        <Operation index="3">
+            <AddNode nodeName="PerformanceShoe" groupName="CarModel" />
+        </Operation>
+        <Operation index="4">
+            <AddDirectedEdge start="BrakeSystem" end="PerformanceShoe" semantics="has" endmult="1"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>
