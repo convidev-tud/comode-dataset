@@ -5,25 +5,28 @@
 
     <SemanticEdit index="0">
         <Semantic>
-            <Category>REFINE</Category>
+            <Category>EXTEND</Category>
             <Description>
-                Add properties to Class and Interface
+                Add new elements to the model.
             </Description>
         </Semantic>
         <Operation index="0">
-            <AddProperty nodeName="Class" propertyName="isAbstract" />
+            <AddNode nodeName="D" groupName="Model" />
         </Operation>
         <Operation index="1">
-            <AddProperty nodeName="Class" propertyName="isPublic" />
+            <AddDirectedEdge start="K" end="D" semantics="contains" endmult="*"/>
         </Operation>
         <Operation index="2">
-            <AddProperty nodeName="Class" propertyName="className" />
+            <AddNode nodeName="E" groupName="Model" />
         </Operation>
         <Operation index="3">
-            <AddProperty nodeName="Interface" propertyName="isPublic" />
+            <AddDirectedEdge start="K" end="E" semantics="contains" endmult="*" />
         </Operation>
         <Operation index="4">
-            <AddProperty nodeName="Interface" propertyName="hasDefaut" />
+            <AddNode nodeName="X" groupName="Model" />
+        </Operation>
+        <Operation index="5">
+            <AddDirectedEdge start="A" end="X" semantics="contains" endmult="1..2"/>
         </Operation>
     </SemanticEdit>
 

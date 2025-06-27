@@ -4,9 +4,6 @@
           xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
 
     <Group name="OOP">
-        <Node name="Package" />
-        <Node name="Class" />
-        <Node name="Signature" />
         <Node name="Method" />
         <Node name="Return" />
         <Node name="Declaration" />
@@ -15,9 +12,6 @@
         <Node name="Datatype" />
     </Group>
 
-    <DirectedEdge start="Package" end="Class" semantics="contains" endmult="*"/>
-    <DirectedEdge start="Class" end="Signature" semantics="contains" endmult="1"/>
-    <DirectedEdge start="Class" end="Method" semantics="contains" endmult="*"/>
     <DirectedEdge start="Method" end="Return" semantics="contains" endmult="1"/>
     <DirectedEdge start="Method" end="Declaration" semantics="contains" endmult="1"/>
     <DirectedEdge start="Declaration" end="ParameterDefinition" semantics="contains" endmult="*" />

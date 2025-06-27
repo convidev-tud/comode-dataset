@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="Application">
+        <Node name="UserManagement"/>
+        <Node name="ActivityLogging"/>
+        <Node name="Authentication"/>
+        <Node name="StandardLogin"/>
+        <Node name="SmartLogin"/>
+    </Group>
+
+    <DirectedEdge start="UserManagement" end="ActivityLogging" semantics="has"/>
+    <DirectedEdge start="UserManagement" end="Authentication" semantics="has" />
+    <DirectedEdge start="Authentication" end="StandardLogin" semantics="has" />
+    <DirectedEdge start="Authentication" end="SmartLogin" semantics="has" />
+</Graph>

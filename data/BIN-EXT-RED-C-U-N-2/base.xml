@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="ApplicationModel">
+        <Node name="UserManagement"/>
+        <Node name="ActivityLogging"/>
+        <Node name="Authentication"/>
+    </Group>
+
+    <DirectedEdge start="UserManagement" end="ActivityLogging" semantics="composed-of" />
+    <DirectedEdge start="UserManagement" end="Authentication" semantics="composed-of" />
+</Graph>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Add account settings to the user management.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="AccountSettings" groupName="ApplicationModel" />
+        </Operation>
+        <Operation index="1">
+            <AddDirectedEdge start="UserManagement" end="AccountSettings" semantics="composed-of"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REFACTOR RENAME</Category>
+            <Description>
+                Conduct renamings to better fit the description.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <RenameNode oldNodeName="LuggageArea" newNodeName="LuggageSpace" />
+        </Operation>
+        <Operation index="1">
+            <RenameProperty nodeName="Cabin" oldPropertyName="size" newPropertyName="dimensions" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

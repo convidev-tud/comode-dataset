@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REPURPOSE</Category>
+            <Description>
+                Transfer the model names to a new abstract domain.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <RenameNode oldNodeName="A" newNodeName="K" />
+        </Operation>
+        <Operation index="1">
+            <RenameNode oldNodeName="B" newNodeName="L" />
+        </Operation>
+        <Operation index="2">
+            <RenameNode oldNodeName="B1" newNodeName="L1" />
+        </Operation>
+        <Operation index="3">
+            <RenameNode oldNodeName="B2" newNodeName="L2" />
+        </Operation>
+        <Operation index="4">
+            <RenameNode oldNodeName="C" newNodeName="M" />
+        </Operation>
+        <Operation index="5">
+            <RenameNode oldNodeName="C1" newNodeName="M1" />
+        </Operation>
+        <Operation index="6">
+            <RenameNode oldNodeName="C2" newNodeName="M2" />
+        </Operation>
+
+        
+    </SemanticEdit>
+
+</Evolution>

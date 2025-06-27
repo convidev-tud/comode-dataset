@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="Model">
+        <Node name="A"/>
+        <Node name="K"/>
+        <Node name="L"/>
+        <Node name="M"/>
+        <Node name="N"/>
+        <Node name="O"/>
+    </Group>
+
+    <DirectedEdge start="A" end="K" semantics="contains" endmult="*"/>
+    <DirectedEdge start="A" end="L" semantics="contains" endmult="2"/>
+    <DirectedEdge start="L" end="M" semantics="contains" endmult="1"/>
+    <DirectedEdge start="L" end="N" semantics="contains" endmult="3"/>
+    <DirectedEdge start="L" end="O" semantics="contains" endmult="*"/>
+</Graph>

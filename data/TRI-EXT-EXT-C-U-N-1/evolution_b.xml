@@ -3,27 +3,24 @@
           xmlns="http://mergebench.org/ns"
           xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
 
-    <SemanticEdit index="0">
+      <SemanticEdit index="0">
         <Semantic>
-            <Category>REFINE</Category>
+            <Category>EXTEND</Category>
             <Description>
-                Add properties to Class and Interface
+                Add different logging mechanisms
             </Description>
         </Semantic>
         <Operation index="0">
-            <AddProperty nodeName="Class" propertyName="isAbstract" />
+            <AddNode nodeName="LoginLog" groupName="Application" />
         </Operation>
         <Operation index="1">
-            <AddProperty nodeName="Class" propertyName="isPublic" />
+            <AddDirectedEdge start="ActivityLogging" end="LoginLog" semantics="has"/>
         </Operation>
         <Operation index="2">
-            <AddProperty nodeName="Class" propertyName="className" />
+            <AddNode nodeName="ChangeLog" groupName="Application" />
         </Operation>
         <Operation index="3">
-            <AddProperty nodeName="Interface" propertyName="isPublic" />
-        </Operation>
-        <Operation index="4">
-            <AddProperty nodeName="Interface" propertyName="hasDefaut" />
+            <AddDirectedEdge start="ActivityLogging" end="ChangeLog" semantics="has"/>
         </Operation>
     </SemanticEdit>
 

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>REPURPOSE</Category>
+            <Description>
+                Transfer the model template to the web-application domain.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <RenameGroup oldGroupName="ApplicationTemplate" newGroupName="WebApplication" />
+        </Operation>
+        <Operation index="0">
+            <RenameNode oldNodeName="Application" newNodeName="WebApp" />
+        </Operation>
+        <Operation index="1">
+            <RenameNode oldNodeName="Frontend" newNodeName="Website" />
+        </Operation>
+        <Operation index="2">
+            <RenameNode oldNodeName="Backend" newNodeName="Server" />
+        </Operation>
+        <Operation index="3">
+            <RenameNode oldNodeName="Interface" newNodeName="RESTApi" />
+        </Operation>
+        <Operation index="4">
+            <RenameNode oldNodeName="Persistance" newNodeName="SQLDatabase" />
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

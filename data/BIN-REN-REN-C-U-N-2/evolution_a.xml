@@ -5,25 +5,22 @@
 
     <SemanticEdit index="0">
         <Semantic>
-            <Category>REFINE</Category>
+            <Category>REFACTOR RENAME</Category>
             <Description>
-                Add properties to Class and Interface
+                Abbreviate team member descriptions.
             </Description>
         </Semantic>
         <Operation index="0">
-            <AddProperty nodeName="Class" propertyName="isAbstract" />
+            <RenameNode oldNodeName="Leader" newNodeName="Lead" />
         </Operation>
         <Operation index="1">
-            <AddProperty nodeName="Class" propertyName="isPublic" />
+            <RenameNode oldNodeName="Developer" newNodeName="Dev" />
         </Operation>
         <Operation index="2">
-            <AddProperty nodeName="Class" propertyName="className" />
+            <RenameNode oldNodeName="BackendDeveloper" newNodeName="BackendDev" />
         </Operation>
         <Operation index="3">
-            <AddProperty nodeName="Interface" propertyName="isPublic" />
-        </Operation>
-        <Operation index="4">
-            <AddProperty nodeName="Interface" propertyName="hasDefaut" />
+            <RenameNode oldNodeName="FrontendDeveloper" newNodeName="FrontendDev" />
         </Operation>
     </SemanticEdit>
 

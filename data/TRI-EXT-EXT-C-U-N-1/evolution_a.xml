@@ -5,25 +5,28 @@
 
     <SemanticEdit index="0">
         <Semantic>
-            <Category>REFINE</Category>
+            <Category>EXTEND</Category>
             <Description>
-                Add properties to Class and Interface
+                Add account settings
             </Description>
         </Semantic>
         <Operation index="0">
-            <AddProperty nodeName="Class" propertyName="isAbstract" />
+            <AddNode nodeName="AccountSettings" groupName="Application" />
         </Operation>
         <Operation index="1">
-            <AddProperty nodeName="Class" propertyName="isPublic" />
+            <AddDirectedEdge start="UserManagement" end="AccountSettings" semantics="has"/>
         </Operation>
         <Operation index="2">
-            <AddProperty nodeName="Class" propertyName="className" />
+            <AddNode nodeName="SecuritySettings" groupName="Application" />
         </Operation>
         <Operation index="3">
-            <AddProperty nodeName="Interface" propertyName="isPublic" />
+            <AddDirectedEdge start="AccountSettings" end="SecuritySettings" semantics="has"/>
         </Operation>
         <Operation index="4">
-            <AddProperty nodeName="Interface" propertyName="hasDefaut" />
+            <AddNode nodeName="UISettings" groupName="Application" />
+        </Operation>
+        <Operation index="5">
+            <AddDirectedEdge start="AccountSettings" end="UISettings" semantics="has"/>
         </Operation>
     </SemanticEdit>
 

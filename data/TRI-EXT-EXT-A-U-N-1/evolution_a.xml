@@ -5,25 +5,22 @@
 
     <SemanticEdit index="0">
         <Semantic>
-            <Category>REFINE</Category>
+            <Category>EXTEND</Category>
             <Description>
-                Add properties to Class and Interface
+                Extend the B node with M and N.
             </Description>
         </Semantic>
         <Operation index="0">
-            <AddProperty nodeName="Class" propertyName="isAbstract" />
+            <AddNode nodeName="M" groupName="Model"/>
         </Operation>
         <Operation index="1">
-            <AddProperty nodeName="Class" propertyName="isPublic" />
+            <AddDirectedEdge start="B" end="M" semantics="subset" endmult="*"/>
         </Operation>
         <Operation index="2">
-            <AddProperty nodeName="Class" propertyName="className" />
+            <AddNode nodeName="N" groupName="Model"/>
         </Operation>
         <Operation index="3">
-            <AddProperty nodeName="Interface" propertyName="isPublic" />
-        </Operation>
-        <Operation index="4">
-            <AddProperty nodeName="Interface" propertyName="hasDefaut" />
+            <AddDirectedEdge start="B" end="N" semantics="subset" endmult="2..*"/>
         </Operation>
     </SemanticEdit>
 

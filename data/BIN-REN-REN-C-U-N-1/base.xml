@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="PlaneModel">
+        <Node name="Plane"/>
+        <Node name="Wing">
+            <Property name="span" />
+        </Node>
+        <Node name="Engine">
+            <Property name="fuelConsumption" />
+        </Node>
+        <Node name="Cabin">
+            <Property name="size" />
+        </Node>
+        <Node name="Seat"/>
+        <Node name="LuggageArea"/>
+    </Group>
+
+    <DirectedEdge start="Plane" end="Wing" semantics="has" endmult="2"/>
+    <DirectedEdge start="Plane" end="Engine" semantics="has" endmult="1..4"/>
+    <DirectedEdge start="Plane" end="Cabin" semantics="has" endmult="1"/>
+    <DirectedEdge start="Cabin" end="Seat" semantics="has" endmult="*"/>
+    <DirectedEdge start="Cabin" end="LuggageArea" semantics="has" endmult="1"/>
+</Graph>

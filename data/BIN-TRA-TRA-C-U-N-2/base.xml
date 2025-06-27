@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="Golf">
+        <Node name="EGolf"/>
+        <Node name="ElectricDrive"/>
+        <Node name="EMotor"/>
+        <Node name="Battery">
+            <Property name="capacity" />
+        </Node>
+    </Group>
+
+    <DirectedEdge start="EGolf" end="ElectricDrive" semantics="has" endmult="1"/>
+    <DirectedEdge start="ElectricDrive" end="EMotor" semantics="has" endmult="1"/>
+    <DirectedEdge start="ElectricDrive" end="Battery" semantics="has" endmult="1"/>
+</Graph>
