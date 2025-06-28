@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Extend the family by adding another child.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="Ann" groupName="Family" />
+        </Operation>
+        <Operation index="1">
+            <AddDirectedEdge start="Children" end="Ann" semantics="part" endmult="1"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

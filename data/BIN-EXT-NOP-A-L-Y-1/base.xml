@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="Appartment">
+        <Node name="FloorPlan"/>
+        <Node name="Kitchen"/>
+        <Node name="Bedroom">
+            <Property name="singleBed=false" />
+            <Property name="doubleBed=true" />
+        </Node>
+        <Node name="Office"/>
+        <Node name="ChildrensRoom">
+            <Property name="singleBed=true" />
+            <Property name="doubleBed=false" />
+        </Node>
+    </Group>
+
+    <Group name="Family">
+        <Node name="FamilySmith"/>
+        <Node name="Parents"/>
+        <Node name="Children"/>
+        <Node name="John"/>
+        <Node name="Susan"/>
+        <Node name="Charly"/>
+    </Group>
+
+    <DirectedEdge start="FloorPlan" end="Kitchen" semantics="contains" endmult="1"/>
+    <DirectedEdge start="FloorPlan" end="Bedroom" semantics="contains" endmult="1"/>
+    <DirectedEdge start="FloorPlan" end="Office" semantics="contains" endmult="1"/>
+    <DirectedEdge start="FloorPlan" end="ChildrensRoom" semantics="contains" endmult="1"/>
+
+    <DirectedEdge start="FamilySmith" end="Parents" semantics="part" endmult="1"/>
+    <DirectedEdge start="FamilySmith" end="Children" semantics="part" endmult="1"/>
+    <DirectedEdge start="Parents" end="John" semantics="part" endmult="1"/>
+    <DirectedEdge start="Parents" end="Susan" semantics="part" endmult="1"/>
+    <DirectedEdge start="Children" end="Charly" semantics="part" endmult="1"/>
+
+    <DirectedEdge start="Family" end="Appartment" semantics="livesIn (requires one bed per person)"/>
+</Graph>

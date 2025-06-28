@@ -53,7 +53,11 @@ def xml_to_puml(input_root):
                 if elem.get("endmult") is not None:
                     endmult = "\"%s\"" % str(elem.get("endmult"))
                     
-                puml += "%s %s --> %s %s : %s\n" % (elem.get("start"), startmult, endmult, elem.get("end"), elem.get("semantics"))
+                semantics = ""
+                if elem.get("semantics") is not None:
+                    semantics = "\"" + elem.get("semantics") + "\""
+                    
+                puml += "%s %s --> %s %s : %s\n" % (elem.get("start"), startmult, endmult, elem.get("end"), semantics)
             
         if action == "end":
             if tag == "Graph":
