@@ -1,8 +1,8 @@
-# Merge Consistency Benchmark
+# The Consistency in Model Evolution (CoModE) Dataset
 
 ## Purpose
-This repository contains the data and tools of the *Merge Consistency Benchmark*.
-The benchmark aims to provide a dataset usable for researching and evaluation different inconsistency scenarios.
+This repository contains the data and tools of the *Consistency in Model Evolution (CoModE)*.
+This repository aims to provide a dataset usable for researching and evaluation different inconsistency scenarios.
 The dataset aims to adhere to the following quality statements:
 
 * **Openness** The dataset and its related artifacts are available under the GNU GPL-v3 license.
@@ -44,7 +44,7 @@ To (re-)generate the applied evolutions and PNG's execute the ``generate.sh`` co
 
 ## Contributing
 
-> Contributions by core-contributors can be made directly in the main branch while the initial build-up of the dataset is in progress. Please refrain from breaking changes in the tooling without filing a pull request. **The main branch will be protected after the first release of the benchmark. Then, contributions are only possible via pull requests.** 
+> Contributions by core-contributors can be made directly in the main branch while the initial build-up of the dataset is in progress. Please refrain from breaking changes in the tooling without filing a pull request. **The main branch will be protected after the first release of the dataset. Then, contributions are only possible via pull requests.** 
 
 ### Adding / Updating Data Points
 
@@ -89,7 +89,7 @@ Find more information about PlantUML: https://github.com/plantuml/plantuml
 
 # Walkthrough by Example
 
-In this section we look at the ``data/EXAMPLE`` data point to explain the workings of the XML/XSD core of the benchmark.
+In this section we look at the ``data/EXAMPLE`` data point to explain the workings of the XML/XSD core of the dataset.
 
 The data point contains:
 * a base model ``base.xml``
