@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="Model">
+        <Node name="CarComponent"/>
+        <Node name="EngineComponent">
+            <Property name="type=diesel" />
+            <Property name="horsepower=200" />
+            <Property name="cylinder=4" />
+        </Node>
+        <Node name="CabinComponent"/>
+        <Node name="WheelComponent"/>
+    </Group>
+
+    <Group name="Prototype">
+        <Node name="Car"/>
+        <Node name="Engine">
+            <Property name="type=diesel" />
+            <Property name="horsepower=200" />
+            <Property name="cylinder=4" />
+        </Node>
+        <Node name="Cabin"/>
+        <Node name="Wheel"/>
+    </Group>
+
+    <DirectedEdge start="CarComponent" end="EngineComponent" semantics="composedOf" endmult="1"/>
+    <DirectedEdge start="CarComponent" end="CabinComponent" semantics="composedOf" endmult="1"/>
+    <DirectedEdge start="CarComponent" end="WheelComponent" semantics="ComposedOf" endmult="4"/>
+
+    <DirectedEdge start="Car" end="Engine" semantics="has" endmult="1"/>
+    <DirectedEdge start="Car" end="Cabin" semantics="has" endmult="1"/>
+    <DirectedEdge start="Car" end="Wheel" semantics="has" endmult="4"/>
+
+    <DirectedEdge start="Model" end="Prototype" semantics="fullySpecifies" />
+</Graph>

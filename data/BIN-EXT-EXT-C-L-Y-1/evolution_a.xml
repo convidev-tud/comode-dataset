@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Extend the software by adding a new Connector class.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="ConnectorClass" groupName="Software" />
+        </Operation>
+        <Operation index="1">
+            <AddDirectedEdge start="IOPackage" end="ConnectorClass" semantics="contains"/>
+        </Operation>
+    </SemanticEdit>
+
+    <SemanticEdit index="1">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Extending the Testsuite by adding a security and load test.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="SecurityTest" groupName="Testsuite" />
+        </Operation>
+        <Operation index="1">
+            <AddNode nodeName="LoadTest" groupName="Testsuite" />
+        </Operation>
+        <Operation index="2">
+            <AddDirectedEdge start="Tests" end="SecurityTest" semantics="contains"/>
+        </Operation>
+        <Operation index="3">
+            <AddDirectedEdge start="Tests" end="LoadTest" semantics="contains"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>

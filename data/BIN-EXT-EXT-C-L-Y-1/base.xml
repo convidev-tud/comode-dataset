@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Graph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/graph.xsd">
+
+    <Group name="Software">
+        <Node name="MainPackage"/>
+        <Node name="IOPackage"/>
+        <Node name="DataPackage"/>
+        <Node name="LoginClass"/>
+        <Node name="UserClass"/>
+        <Node name="ProductClass"/>
+    </Group>
+
+    <Group name="Testsuite">
+        <Node name="Tests"/>
+        <Node name="LoginTest"/>
+        <Node name="UserTest"/>
+        <Node name="ProductTest"/>
+    </Group>
+
+    <DirectedEdge start="MainPackage" end="IOPackage" semantics="contains" />
+    <DirectedEdge start="MainPackage" end="DataPackage" semantics="contains" />
+    <DirectedEdge start="IOPackage" end="LoginClass" semantics="contains" />
+    <DirectedEdge start="DataPackage" end="UserClass" semantics="contains" />
+    <DirectedEdge start="DataPackage" end="ProductClass" semantics="contains" />
+
+    <DirectedEdge start="Tests" end="LoginTest" semantics="contains" />
+    <DirectedEdge start="Tests" end="UserTest" semantics="contains" />
+    <DirectedEdge start="Tests" end="ProductTest" semantics="contains" />
+
+    <DirectedEdge start="Software" end="Testsuite" semantics="isFullyTestedBy" />
+</Graph>

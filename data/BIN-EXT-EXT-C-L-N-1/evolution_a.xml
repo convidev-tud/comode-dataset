@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Evolution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://mergebench.org/ns"
+          xsi:schemaLocation="http://mergebench.org/ns ../../meta/XSL/operations.xsd">
+
+    <SemanticEdit index="0">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Extend the car model by adding cabin components.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="SeatComponent" groupName="Model" />
+        </Operation>
+        <Operation index="1">
+            <AddDirectedEdge start="CabinComponent" end="SeatComponent" semantics="composedOf" endmult="4"/>
+        </Operation>
+        <Operation index="2">
+            <AddNode nodeName="TankComponent" groupName="Model" />
+        </Operation>
+        <Operation index="3">
+            <AddDirectedEdge start="CarComponent" end="TankComponent" semantics="composedOf" endmult="1"/>
+        </Operation>
+    </SemanticEdit>
+
+    <SemanticEdit index="1">
+        <Semantic>
+            <Category>EXTEND</Category>
+            <Description>
+                Extending the Testsuite by adding a security and load test.
+            </Description>
+        </Semantic>
+        <Operation index="0">
+            <AddNode nodeName="Brake" groupName="Prototype"/>
+        </Operation>
+        <Operation index="1">
+            <AddNode nodeName="StearingWheel" groupName="Prototype"/>
+        </Operation>
+        <Operation index="2">
+            <AddDirectedEdge start="Car" end="Brake" semantics="has" endmult="4"/>
+        </Operation>
+        <Operation index="3">
+            <AddDirectedEdge start="Car" end="StearingWheel" semantics="has" endmult="1"/>
+        </Operation>
+    </SemanticEdit>
+
+</Evolution>
