@@ -5,7 +5,7 @@ This repository contains the data and tools of the *Consistency in Model Evoluti
 This repository aims to provide a dataset usable for researching and evaluation different inconsistency scenarios.
 The dataset aims to adhere to the following quality statements:
 
-* **Openness** The dataset and its related artifacts are available under the GNU GPL-v3 license.
+* **Openness** The dataset and its code artifacts are available under the GNU GPL-v3 license. Generated Images and documentes are license CC-BY 4.0.
 * **Reusability** The dataset is largely technology agnostic. The used base-technochnology is XML/XSD for models and metamodels. Exemplary model transformations into other common modeling languages are provided or can be easily created.
 * **Comprehensibility** The developed artifacts and data points aim to be easy to understand. The used metamodels are abstract and simple. Only rudimentary knowledge of software modeling must be required to understand the data points. We provide documentation for our tooling.
 * **Extensibility** The dataset is not be conceptually limited to a specific number of data points. The tooling supports the creation of new data points by the community.
