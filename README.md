@@ -34,6 +34,22 @@ We are happy to receive contributions to let the dataset grow over time. We aim 
   * **auto_evolv** Is the script to apply an evolution model to a graph model.
   * **graph_to_puml** Is the script to generate a PlantUML file and PNG from a graph model.
   * graph -> other formats (TODO)
+ 
+### Naming Convetion of Data Points
+The data points (consistency problems) in th ``data`` directory are named using a specific naming schema which explains their strucutre and purpose:
+
+[BIN|TRI]-[operationA]-[operationB]-[C|A]-[L|U]-[Y|N]-[index]
+
+* [BIN|TRI] BIN for two-model scenarios, TRI for three-model scenarios
+* operationA The first evolution operation in case of three-model, or operation in case of two-model
+* operationB The second evolution operation in case of three-model, or reverse operation in case of two-model
+* [C|A] Concrete or Abstract domain
+* [L|U] Linked or unlinked models
+* [Y|N] Y if there are intentional contradictions, N if there are none.
+* index: INT, in case there are multiple data points for the same confligurations
+
+**Example**
+``TRI-EXT-RED-A-U-N-1`` is a three-model scenario (TRI) where one evolution is EXTension and the other evolution REDuction. The cases uses the abstract domain (A) and the models have no links (U), meaning they use compositions only. The case contains no (N) intentional contradictions. For this configuration, the case is the first (1) sample.
   
 ### Manual Execution (Dataset Processing)
 
