@@ -7,7 +7,7 @@ The dataset aims to adhere to the following quality statements:
 
 * **Openness** The dataset and its related artifacts are available under the GNU GPL-v3 license.
 * **Reusability** The dataset is largely technology agnostic. The used base-technochnology is XML/XSD for models and metamodels. Exemplary model transformations into other common modeling languages are provided or can be easily created.
-* **Comprehendability** The developed artifacts and data points aim to be easy to understand. The used metamodels are abstract and simple. Only rudimentary knowledge of software modeling must be required to understand the data points. We provide documentation for our tooling.
+* **Comprehensibility** The developed artifacts and data points aim to be easy to understand. The used metamodels are abstract and simple. Only rudimentary knowledge of software modeling must be required to understand the data points. We provide documentation for our tooling.
 * **Extensibility** The dataset is not be conceptually limited to a specific number of data points. The tooling supports the creation of new data points by the community.
 * **Relevance** Each data point aims to represent a relevant consistency problem. The used metamodels are simplifications but have strong similarities with practical modeling languages
 
