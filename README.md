@@ -236,3 +236,15 @@ The following example evolution modifies the above presented examplary graph.
 ```
 
 The evolution contains two *SemanticEdit*s. The first performs a *REPURPOSE* modification and the second one a *SIMPLIFY* modification. Both *SemanticEdit*s have a short human readable *Description*. In summary, the first edit changes the animal types "cat" and "dog" to "hamster" and "mouse". The second edit simplifies the model by removing the "age" property from both animal types.
+
+## Metamodels
+
+You find the origin XSD metamodels in the respected directory of this repository. The following diagrams serve just for visualization and are missing XSD constraints.
+
+### Graph Metamodel Visualization
+
+![Graph Metamodel Image](https://github.com/convidev-tud/comode-dataset/blob/main/meta/comode-graph-metamodel.png)
+
+### Change Metamodel Visualization
+
+![Change Metamodel Image](https://github.com/convidev-tud/comode-dataset/blob/main/meta/comode-change-metamodel.png)
